@@ -1,14 +1,14 @@
 declare @Producers table
 (
 	id int not null
-	,name varchar(256)
+	,name nvarchar(256)
 )
 
 declare @TradeMarks table 
 (
 	id int not null
 	,ProducerId int not null
-	,name varchar(256)
+	,name nvarchar(256)
 )
 
 insert into @Producers (id, name)
@@ -57,8 +57,8 @@ group by prods.[name]
 
 declare @Hierarchy table
 (
-	obj				varchar(64)					
-	,parent_obj		varchar(64)
+	obj				nvarchar(64)					
+	,parent_obj		nvarchar(64)
 )
 
 insert into @Hierarchy
